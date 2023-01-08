@@ -12,8 +12,7 @@ This method was tested on an ecommerce company's dataset and MovieLens. To prote
 [MovieLens 20M Dataset](https://grouplens.org/datasets/movielens/20m/): This dataset contains rating for movies by users.
 
 The dataset has been created by [vae_data_creation.ipynb](vae_data_creation.ipynb)
-Follow the steps in the notebook to create the dataset. The pre-prepared dataset is available in [data_csr.pkl](ml-20m%2Fdata_csr.pkl) 
-
+Follow the steps in the notebook to create the dataset. 
 ### Training and validation
 
 Usage: 
