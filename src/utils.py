@@ -187,7 +187,7 @@ def NDCG_binary_at_k_batch(recs, heldout_batch, k=100):
 def ILD_at_k(recs, item_cs_matrix, k=100):
     pair_lists = [itertools.combinations(user, 2) for user in recs]
     list_size = len(recs[0])
-    ilds = [sum([1 - item_cs_matrix.loc[pair[0]][pair[1]] for pair in pair_list])/float(list_size*(list_size-1)) for pair_list in pair_lists]
+    ilds = [sum([1 - item_cs_matrix.loc[pair[0]][pair[1]] for pair in pair_list])/float(list_size*(list_size-1))*2 for pair_list in pair_lists]
     return ilds
 
 def EILD_at_k(prediction_list, heldout_batch, item_cs_matrix,k=100):
