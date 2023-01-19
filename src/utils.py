@@ -229,7 +229,7 @@ def temporal_diversity_at_k(recs1, recs2, k=100):
 def temporal_diversity_rep_at_k(recs1, recs2, item_cs_matrix, k=100):
     list_size = len(recs1[0])
     pair_lists = [itertools.product(l1, l2) for l1,l2 in zip(recs1, recs2)]
-    tilds = [sum([1 - item_cs_matrix.loc[pair[0]][pair[1]] for pair in pair_list])/float(list_size*(list_size-1)) for pair_list in pair_lists]
+    tilds = [sum([1 - item_cs_matrix.loc[pair[0]][pair[1]] for pair in pair_list])/float(list_size*(list_size)) for pair_list in pair_lists]
     return tilds
 
 # def temporal_diversity_at_k(prediction_list, k=100):
